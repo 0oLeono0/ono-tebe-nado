@@ -1,12 +1,29 @@
-/* heade */
+/* Общие стили */
 .container {
   box-sizing: border-box;
   max-width: 1100px;
   padding: 0 50px;
 }
 
+.info {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-style: normal;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* header */
+
 .header {
-  padding: 92px 0 96px;
+  padding: 93px 0 95px;
 }
 
 .header__container {
@@ -41,49 +58,35 @@
 }
 
 .header__info {
-  grid-area: info;
-  display: flex;
-  flex-direction: column;
-  font-size: 18px;
+  justify-self: end;
+  padding-right: 35px;
 }
 
-.header__info-link {
+.info__link {
   line-height: 24px;
   text-underline-offset: 5px;
 }
 
-.header__info-address {
-  font-style: normal;
-}
-
 /* cover */
+
 .cover {
-  z-index: 0;
   position: relative;
-  background: url(../images/cover.jpg);
+  z-index: 0;
+  background: url(../images/cover.jpg) center/cover no-repeat;
 }
 
 .cover__container {
-  padding: 165px 50px 50px;
-  background-size: cover;
+  padding: 161px 50px 50px;
   color: #fff;
   text-transform: uppercase;
-}
-
-.cover__overlay {
-  z-index: -1;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .cover__title {
   font-weight: bold;
   font-size: 100px;
-  letter-spacing: 45px;
-  line-height: 124px;
-  margin-bottom: 120px;
+  letter-spacing: 30px;
+  line-height: 125px;
+  margin-bottom: 124px;
 }
 
 .cover__title-center {
@@ -94,6 +97,15 @@
 .cover__title-right {
   display: block;
   text-align: right;
+  line-height: 120px;
+}
+
+.cover__title-space {
+  letter-spacing: 60px;
+}
+
+.cover__title-nospace {
+  letter-spacing: 0;
 }
 
 .cover__subline {
@@ -115,12 +127,13 @@
   font-family: Raleway, sans-serif;
   padding: 12px 32px;
   font-size: 22px;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
 }
 
 /* lots */
+
 .lots {
-  padding: 177px 0 146px;
+  padding: 179px 0 146px;
 }
 
 .lots__container {
@@ -154,23 +167,16 @@
   background: center/cover no-repeat;
 }
 
-.lots__card:nth-child(1) {
+.lots__card-first {
   background-image: url(../images/card-lot-01.jpg);
 }
 
-.lots__card:nth-child(2) {
+.lots__card-second {
   background-image: url(../images/card-lot-02.jpg);
 }
 
-.lots__card:nth-child(3) {
+.lots__card-third {
   background-image: url(../images/card-lot-03.jpg);
-}
-
-.lots__card-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .lots__card-title {
@@ -190,6 +196,7 @@
 }
 
 /* about */
+
 .about {
   padding: 0 24px 170px;
 }
@@ -197,7 +204,7 @@
 .about__container {
   display: flex;
   gap: 72px;
-  padding: 35px 0 13px 47px;
+  padding: 36px 0 11px 47px;
 }
 
 .about__logo {
@@ -205,7 +212,7 @@
   height: 240px;
   flex-shrink: 0;
   border-radius: 100%;
-  background: #000 url(../images/logo-white.svg) center/60% no-repeat;
+  background: #000 url(../images/logo-white.svg) center/62% no-repeat;
 }
 
 .about__block {
@@ -226,9 +233,7 @@
   font-size: 20px;
 }
 
-
 /* footer */
-
 .footer {
   padding-bottom: 88px;
 }
@@ -240,56 +245,53 @@
   justify-content: space-between;
 }
 
-.footer__info {
-  grid-area: info;
-  display: flex;
-  flex-direction: column;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.footer__info-address {
-  font-style: normal;
-}
-
 .footer__nav {
   grid-area: nav;
+  padding-right: 13px;
 }
 
 .footer__nav-list {
-  text-align: center;
   display: flex;
   flex-direction: column;
   list-style: none;
   font-size: 18px;
+  text-align: center;
 }
 
 .footer__nav-link {
-  text-underline-offset: 3px;
+  text-underline-offset: 4px;
 }
 
-.footer__links {
+.footer__links-list {
   grid-area: links;
   display: flex;
   gap: 48px;
 }
 
-.footer__link {
+.footer__links-item {
+  display: block;
   width: 48px;
   height: 48px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.footer__link:nth-child(1) {
+.footer__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: center/contain no-repeat;
+}
+
+.footer__link-yt {
   background-image: url(../images/yt.svg);
 }
 
-.footer__link:nth-child(2) {
+.footer__link-vk {
   background-image: url(../images/vk.svg);
 }
 
-.footer__link:nth-child(3) {
+.footer__link-pinterest {
   background-image: url(../images/pinterest.svg);
 }
