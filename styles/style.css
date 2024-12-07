@@ -167,15 +167,15 @@
   background: center/cover no-repeat;
 }
 
-.lots__card-first {
+.lots__card-movie {
   background-image: url(../images/card-lot-01.jpg);
 }
 
-.lots__card-second {
+.lots__card-book {
   background-image: url(../images/card-lot-02.jpg);
 }
 
-.lots__card-third {
+.lots__card-picture {
   background-image: url(../images/card-lot-03.jpg);
 }
 
